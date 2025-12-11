@@ -1,9 +1,12 @@
+import { Carousel } from "bootstrap/dist/js/bootstrap.min"
+
 export default function Footer(){
     return (
         <>
-       <span>
-       This is the Footer
-       </span>
-        </>
+        <footer className="fixed-bottom w-100 bg-dark text-warning tesxt-center">
+           &copy; 2025 
+        </footer>
+      
+       </>
     )
 }

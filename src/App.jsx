@@ -7,6 +7,7 @@ import Footer from './components/Footer/footer';
 
 import Navbar from './components/Navbar/Navbar';
 
+
 import HomePage from './pages/Home/homepage';
 import AboutPage from './pages/About/AboutPage';
 import ContactPage from './pages/About/ContactPage';
@@ -21,15 +22,12 @@ function App() {
       </header>
       <main>
         <HomePage />
+        
         {/* <ContactPage /> */}
        
       </main>
-      <footer>
-
-      <footer />
       <Footer />
-      </footer>
-    </>
+      </>
   )
 }
 
