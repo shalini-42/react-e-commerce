@@ -1,7 +1,11 @@
 .home_banner{
     height : 200px;
+    
     .carousel {
         height: 100%;
+        img{
+            height: 300px;
+        }
     
     }
 

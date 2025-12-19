@@ -1,5 +1,5 @@
 import './Carousel.css';
-const Carousel = () =>{
+const Carousel = ({images}) =>{
     return (
       <div id="carouselExampleIndicators" class="carousel slide custom_carousel h-100">
   <div className="carousel-indicators h-100">
@@ -7,16 +7,14 @@ const Carousel = () =>{
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div classN="carousel-inner h-100">
-    <div className="carousel-item active">
-      <img src="/images/carousel/img1.png" className="d-block w-100 object-fit-cover" alt="..."/>
+  <div className="carousel-inner h-100">
+    {images.map((img_object, index) => (
+      <div className={index === 0 ? "carousel-item active": "carousel-item"}>
+      <img src={img_object.img_src} className="d-block w-100 h-200 object-fit-cover" alt="..."/>
     </div>
-    <div className="carousel-item">
-      <img src="/images/carousel/img2.png" className="d-block w-100 object-fit-cover" alt="..." />
-    </div>
-    <div className="carousel-item">
-      <img src="/images/carousel/img3.jpg" className="d-block w-100 object-fit-cover" alt="..."/>
-    </div>
+    ))
+  
+    }
   </div>
   <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
