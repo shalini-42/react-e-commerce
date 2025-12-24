@@ -1,0 +1,24 @@
+.product_card{
+    img{
+        height: 200px;
+        object-fit: cover;
+        object-position: top;
+    }
+    .card-title{
+        height: 10px;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+    }
+    .card-body{
+        height: 350px;
+        .card-text{
+            height: 180px;
+            overflow: hidden;
+            /* background-color: blue; */
+        }
+        p{
+            margin-top: 15px;
+        }
+    }
+
+}

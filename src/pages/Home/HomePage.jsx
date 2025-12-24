@@ -1,26 +1,10 @@
 import Carousel from "../../components/carousel/Carousel";
 import './HomePage.css';
 
-const carousel_images = [
-    {
-        id : 1,
-        img_src : '/images/carousel/img1.png',
-        title : 'buhahahatar',
-        caption :"yuhoooooll"
-    },
-     {
-        id : 2,
-        img_src : '/images/carousel/img2.png',
-        title : 'buhahahatar',
-        caption : "yuhoooooll"
-    },
-     {
-        id : 3,
-        img_src : '/images/carousel/img3.jpg',
-        title : 'buhahahatar',
-        caption : "yuhooooolll"
-    }
-]
+import { product_list } from "../../data/products";
+import { carousel_images } from "../../data/carousel_images";
+
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 function HomePage(){
     return (<>
@@ -30,12 +14,28 @@ function HomePage(){
                 <Carousel images = {carousel_images} />
             </div>
             <div className="col bg-success">
-               
+             
             </div>
+            
+            {/* <div className="container row">
+                <ol>
+                    {
+                        product_list.map((product) =>(
+                            <li>{product.title} - Rs {product.price}</li>
+                        ))
+                    }
+                </ol>
+            </div> */}
+        <div className="card-group my-3">
+           { product_list.map((product, index) =>(
+                <ProductCard product={product} key={product.id}  />
+  ))
+}
+        </div>
         </div>
     </div>
     </>
-    )
+    );
 }
 
 export default HomePage;

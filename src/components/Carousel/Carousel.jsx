@@ -1,16 +1,16 @@
 import './Carousel.css';
 const Carousel = ({images}) =>{
     return (
-      <div id="carouselExampleIndicators" class="carousel slide custom_carousel h-100">
+      <div id="carouselExampleIndicators" className="carousel slide custom_carousel h-100">
   <div className="carousel-indicators h-100">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div className="carousel-inner h-100">
     {images.map((img_object, index) => (
       <div className={index === 0 ? "carousel-item active": "carousel-item"}>
-      <img src={img_object.img_src} className="d-block w-100 h-200 object-fit-cover" alt="..."/>
+      <img src={img_object.img_src} className="d-block w-100 h-100 object-fit-cover" alt="..."/>
     </div>
     ))
   
